@@ -156,6 +156,7 @@ li a.iniciarsecion:hover {
 
   .navlinks li a:hover {
     border-bottom: none;
+    border-top: none;
   }
 
   .menu-btn {
