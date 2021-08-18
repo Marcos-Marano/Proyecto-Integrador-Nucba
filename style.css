@@ -11,7 +11,7 @@ html {
 body {
  font-size: 1.6rem;
  line-height: 2;
- background-image: url(img/background.jpg);
+ background-image: linear-gradient(to right, rgba(45, 0, 248, 0.479) 0%, rgba(47, 51, 56, 0.479) 100%);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -558,6 +558,183 @@ li a.iniciarsecion:hover {
 
 /** FIN MAIN **/
 
+/** GALERIA PROYECTOS **/
+.subtitulo{
+  text-align: center;
+  font-family: 'Rajdhani', sans-serif;
+  text-transform: uppercase;
+}
+.gallery{
+  background: #0000;
+}
+
+.contenedor-galeria{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.img-galeria{
+  object-fit: cover;
+  width: 30%;
+  display: block;
+  margin-bottom: 15px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, .5);
+  cursor: pointer;
+}
+
+.imagen-light{
+  position: fixed;
+  background: rgba(0, 0, 0, .6);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translate(100%);
+  transition: transform .2s ease-in-out;
+}
+.show{
+  transform: translate(0);
+}
+
+.agregar-imagen{
+  object-fit: cover;
+  width: 60%;
+  border-radius: 10px;
+  transition: transform .3s .2s;
+  transform: scale(0);
+}
+.showImage{
+  transform: scale(1);
+}
+.close{
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 40px;
+  cursor: pointer;
+}
+.experts{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.cont-expert{
+  width: 30%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.cont-expert img{
+  width: 80%;
+  display: block;
+  margin: 0 auto;
+}
+
+.n-expert{
+  display: inline-block;
+  margin-top: 20px;
+  width: 100%;
+  font-weight: 400;
+}
+@media screen and (max-width:800px) {
+  .agregar-imagen{
+      width: 80%;
+  }
+  .img-galeria{
+      width: 45%;
+  }
+  .cont-expert{
+      width: 80%;
+  }
+
+}
+
+@media screen and (max-width:500px){
+  .subtitulo{
+      font-size: 30px;
+  }
+  .agregar-imagen{
+      width: 95%;
+  }
+  .img-galeria{
+      width: 95%;
+  }
+}
+/** FIN GALERIA PROYECTOS **/
+
+/** CONTACTO **/
+.contacto-bg {
+  background-image: url(img/bg-contacto.jpg);
+  height: 70rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.formulario {
+  margin: -60rem auto 0 auto;
+  width: 95%;
+  padding: 5rem;
+}
+.campo {
+  display: flex;
+  margin-bottom: 2rem;
+}
+.campo__label {
+  flex: 0 0 9rem;
+  text-align: right;
+  padding-right: 2rem;
+  color: white;
+}
+.campo__field {
+  flex: 1;
+  border: 1px solid var(--gris);
+}
+.campo__field--textarea {
+  height: 20rem;
+  color: white;
+}
+.boton-contacto {
+  display: block;
+  text-align: center;
+  padding: 1rem 3rem;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  border: none;
+}
+.boton-contacto:hover {
+  cursor: pointer;
+}
+.mapa {
+  margin-top: 10rem;
+  margin-left: 35rem;
+}
+.p-mapa {
+  margin-left: 50rem;
+  
+}
+@media screen and (max-width:500px) {
+  .contacto-bg {
+    height: 50rem;
+  }
+  .formulario {
+    margin: -50rem auto 0 auto;
+   width: 100%;
+  }
+  .mapa {
+    margin: 0;
+    max-width: 99%;
+  }
+  .p-mapa {
+    margin-left: 6rem;
+    
+  }
+}
+
 /** FOOTER **/
 
 .footer {
@@ -613,3 +790,5 @@ li a.iniciarsecion:hover {
     font-size: 0.7rem;
   }
 }
+
+/** FIN FOOTER **/
